@@ -1,4 +1,5 @@
-# teste
+# Gremio
+esse é um projeto de desenvolvimento web no qual um colega é "meu cliente". A proposta era fazer um site de acordo com os gostos dele.
 
 ## Project setup
 ```
