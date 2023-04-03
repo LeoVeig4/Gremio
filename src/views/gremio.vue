@@ -4,7 +4,7 @@
       <i class="fa-solid fa-volume-high text-white" v-if="!this.is_muted"></i
       ><i class="fa-solid fa-volume-xmark text-white" v-else></i>
     </button>
-    <h1 class="text-white">Gremio</h1>
+    <h1 class="text-white">Grêmio</h1>
     <div class="m-4">
       <i class="fa-solid fa-star fa-2xl estrela1 floaters"></i>
       <i class="fa-solid fa-star fa-2xl estrela2 floaters"></i>
@@ -21,17 +21,65 @@
   <div class="agrup-content">
     <div class="caixa">
       <div>
-        <img src="../assets/gremio.png" />
-        <h2 class="m-2"><b>título</b></h2>
+        <img class="caixa-img" src="../assets/camisa_marrom.jpg" />
+        <h2 class="m-2"><b>Camisa Original</b></h2>
         <p class="text-black font-10">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
+          Originalmente, o uniforme do clube deveria ser havana (uma espécie de
+          marrom), branco e preto. Mas como a cor era difícil de encontrar, a
+          diretoria mudou para o azul.
         </p>
       </div>
     </div>
-    <div class="caixa">caixa</div>
+    <div class="caixa">
+      <img class="caixa-img" src="../assets/getulio.jpg" />
+      <h2 class="m-2"><b>Getúlio e o Grêmio</b></h2>
+      <p class="text-black font-10">
+        O Grêmio levou o Campeonato Gaúcho de 1930 antes do torneio terminar.
+        Com a revolução que levou Getúlio Vargas à presidência do país, a
+        disputa foi interrompida e o time consagrado campeão por ter a melhor
+        campanha.
+      </p>
+    </div>
+    <div class="caixa">
+      <img class="caixa-img" src="../assets/bonde.jpg" />
+      <h2 class="m-2"><b>O hino</b></h2>
+      <p class="text-black font-10">
+        Lupicínio compôs o verso “Até a pé nós iremos” inspirado em uma greve
+        dos condutores de bonde em Porto Alegre. Sem transporte público, os
+        torcedores do Grêmio tiveram que ir a pé para o Estádio dos Eucaliptos
+        acompanhar um clássico contra o Internacional.
+      </p>
+    </div>
+    <div class="caixa">
+      <img class="caixa-img" src="../assets/lancheria.webp" />
+      <h2 class="m-2"><b>Coca Cola Azul</b></h2>
+      <p class="text-black font-10">
+        Muitos anos mais tarde a Coca-Cola chegou a lançar uma latinha azul para
+        ser comercializada em Porto Alegre. A questão da cor é séria mesmo: na
+        Hamburgueria 1903, lanchonete oficial do Grêmio, o catchup recebe um
+        aviso: “Infelizmente ainda não conseguimos mudar a cor”.
+      </p>
+    </div>
+    <div class="caixa">
+      <img class="caixa-img" src="../assets/grenal.png" />
+      <h2 class="m-2"><b>Grenal</b></h2>
+      <p class="text-black font-10">
+        Um dos maiores clássicos do mundo é Grêmio x Internacional, apelidado
+        por Gre-Nal. A disputa centenária ocorreu pela primeira vez no dia 18 de
+        julho de 1909 e o Grêmio venceu a partida por 10 a 0.
+      </p>
+    </div>
+    <div class="caixa">
+      <img class="caixa-img" src="../assets/avalanche.gif" />
+      <h2 class="m-2"><b>Avalanche</b></h2>
+      <p class="text-black font-10">
+        No antigo Estádio Olímpico, a torcida gremista tinha o ritual de
+        comemorar os gols do clube com uma avalanche nas arquibancadas.
+      </p>
+    </div>
+  </div>
+  <div>
+    <button class="bot-grande">Esteja por dentro dos Próximos jogos</button>
   </div>
   <audio controls autoplay id="audio">
     <source src="../assets/audio/hino-gremio-rs.mp3" type="audio/mpeg" />
@@ -68,9 +116,11 @@ body {
 h1 {
   font-size: 100px;
 }
+
 span {
   font-size: 25px;
 }
+
 .logo {
   box-sizing: border-box;
   overflow: hidden;
@@ -81,6 +131,7 @@ span {
   display: relative;
   height: 30px;
 }
+
 .floaters {
   transform: translatey(0px);
   animation: float 2s ease-in-out infinite;
@@ -91,39 +142,48 @@ span {
     box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
     transform: translatey(0px);
   }
+
   50% {
     box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
     transform: translatey(-5px);
   }
+
   100% {
     box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
     transform: translatey(0px);
   }
 }
+
 .estrela1 {
   color: yellow;
   position: absolute;
   margin-top: 25px;
 }
+
 .estrela2 {
   color: yellow;
   position: absolute;
   margin-left: 93px;
 }
+
 .estrela3 {
   color: yellow;
   position: absolute;
   margin-top: 25px;
   margin-left: 186px;
 }
+
 audio {
   display: none;
 }
+
 .agrup-content {
   border-radius: 10px;
   width: 1000px;
-  height: 2000px;
+  min-height: 100vh;
   display: flex;
+  flex-wrap: wrap;
+
   background-image: linear-gradient(
       to bottom,
       rgb(0, 0, 0),
@@ -135,23 +195,34 @@ audio {
   background-position: center;
   background-attachment: fixed;
   margin: auto;
-  margin-top: 200px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
+
 .caixa {
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.875);
   width: 400px;
-  height: 400px;
+  height: 430px;
   margin: 50px;
 }
-.caixa div img {
+
+.caixa-img {
+  border-radius: 10%;
   height: 200px;
   height: 200px;
   filter: drop-shadow(0px 20px 5px #000003);
+  margin-bottom: 1.25rem;
+  margin-top: 1.25rem;
 }
 
 p {
   font-size: 14px;
+  margin: 15px;
+}
+
+.bot-grande {
+  width: 850px;
   margin: auto;
 }
 </style>
