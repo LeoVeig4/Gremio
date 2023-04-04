@@ -250,7 +250,7 @@ p {
   transition-duration: 0.4s;
 }
 @media screen and (min-width: 801px) {
-  .bot-grande{
+  .bot-grande {
     font-size: 35px;
   }
   .bot-grande:hover {
@@ -262,7 +262,7 @@ p {
 
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
 @media screen and (max-width: 800px) {
-  .bot-grande{
+  .bot-grande {
     font-size: 20px;
   }
   .bot-grande:hover {
