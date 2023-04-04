@@ -15,7 +15,7 @@
   </div>
   <div>
     <img class="small m-2 floaters" src="../assets/rs.jpg" />
-    <span class="text-white">O Maior tricolor do Rio Grande do Sul</span>
+    <span class="text-white">O Maior tricolor do Mundo</span>
     <span><img class="small m-2 floaters" src="../assets/rs.jpg" /></span>
   </div>
   <div class="agrup-content">
@@ -78,8 +78,15 @@
       </p>
     </div>
   </div>
+  <div class="ingresso">
+    <span><img class="floaters2" src="../assets/ingresso.png" alt="" /></span>
+    <button class="bot-grande" @click="goto()">
+      <b>Esteja por dentro do jogo</b>
+    </button>
+    <span><img class="floaters2" src="../assets/ingresso.png" alt="" /></span>
+  </div>
   <div>
-    <button class="bot-grande">Esteja por dentro dos Próximos jogos</button>
+    <img src="../assets/mosqueteiro.png" alt="" />
   </div>
   <audio controls autoplay id="audio">
     <source src="../assets/audio/hino-gremio-rs.mp3" type="audio/mpeg" />
@@ -103,11 +110,19 @@ export default {
       const x = document.getElementById("audio");
       x.muted = this.is_muted;
     },
+    goto() {
+      window.location.href = "https://arenapoa.com.br/ingressos/";
+    },
   },
 };
 </script>
 
 <style>
+@media only screen and (min-width: 600px) {
+  body {
+    background-color: rgb(0, 0, 0);
+  }
+}
 body {
   background: linear-gradient(to bottom, black, #0066a8, #0066a8, #f2f2f2);
   position: relative;
@@ -179,11 +194,12 @@ audio {
 
 .agrup-content {
   border-radius: 10px;
-  width: 1000px;
+  min-width: 500px;
+  width: 60vw;
   min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
-
+  justify-content: center;
   background-image: linear-gradient(
       to bottom,
       rgb(0, 0, 0),
@@ -222,7 +238,66 @@ p {
 }
 
 .bot-grande {
-  width: 850px;
+  width: 50vw;
+  height: 120px;
   margin: auto;
+  border-radius: 40px;
+  background: #f2f2f2;
+  border-color: rgb(0, 102, 168);
+  border-width: 5px;
+  margin-bottom: 2rem;
+
+  transition-duration: 0.4s;
+}
+@media screen and (min-width: 801px) {
+  .bot-grande{
+    font-size: 35px;
+  }
+  .bot-grande:hover {
+    background-color: rgb(0, 102, 168); /* Green */
+    color: #f2f2f2;
+    border-width: 25px;
+  }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 800px) {
+  .bot-grande{
+    font-size: 20px;
+  }
+  .bot-grande:hover {
+    background-color: rgb(0, 102, 168); /* Green */
+    color: #f2f2f2;
+    border-width: 10px;
+  }
+}
+
+.bot-grande:hover {
+  background-color: rgb(0, 102, 168); /* Green */
+  color: #f2f2f2;
+  border-width: 25px;
+}
+.ingresso span img {
+  width: 90px;
+  margin-left: 0.7rem;
+  margin-right: 0.7rem;
+}
+.floaters2 {
+  transform: translatey(0px);
+  animation: float2 2s ease-in-out infinite;
+}
+
+@keyframes float2 {
+  0% {
+    transform: translatey(0px);
+  }
+
+  50% {
+    transform: translatey(-5px);
+  }
+
+  100% {
+    transform: translatey(0px);
+  }
 }
 </style>
