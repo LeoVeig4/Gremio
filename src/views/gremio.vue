@@ -88,9 +88,8 @@
   <div>
     <img src="../assets/mosqueteiro.png" alt="" />
   </div>
-  <audio controls autoplay id="audio">
+  <audio controls autoplay id="music">
     <source src="../assets/audio/hino-gremio-rs.mp3" type="audio/mpeg" />
-    Your browser does not support the audio element.
   </audio>
 </template>
 
@@ -107,8 +106,7 @@ export default {
   methods: {
     mute() {
       this.is_muted = !this.is_muted;
-      const x = document.getElementById("audio");
-      x.muted = this.is_muted;
+      document.getElementById("music").muted = this.is_muted;
     },
     goto() {
       window.location.href = "https://arenapoa.com.br/ingressos/";
@@ -118,6 +116,10 @@ export default {
 </script>
 
 <style>
+audio {
+  display: none;
+}
+
 @media only screen and (min-width: 600px) {
   body {
     background-color: rgb(0, 0, 0);
@@ -186,10 +188,6 @@ span {
   position: absolute;
   margin-top: 25px;
   margin-left: 186px;
-}
-
-audio {
-  display: none;
 }
 
 .agrup-content {

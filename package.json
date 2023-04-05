@@ -2,14 +2,14 @@
   "name": "teste",
   "version": "0.1.0",
   "private": true,
+  "homepage":"https://github.com/LeoVeig4/LeoVeig4.github.io",
   "scripts": {
-    "deploy": "node scripts/gh-pages-deploy.js",
+    "deploy":"yarn run build && gh-pages -d dist",
     "serve": "vue-cli-service lint && vue-cli-service serve --skip-plugins @vue/cli-plugin-eslint",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "execa": "latest",
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-brands-svg-icons": "^6.4.0",
     "@fortawesome/free-regular-svg-icons": "^6.4.0",
@@ -18,6 +18,8 @@
     "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.3",
     "core-js": "^3.8.3",
+    "execa": "latest",
+    "gh-pages": "^5.0.0",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3"
   },
