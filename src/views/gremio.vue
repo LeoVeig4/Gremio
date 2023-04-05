@@ -18,6 +18,9 @@
     <span class="text-white">O Maior tricolor do Mundo</span>
     <span><img class="small m-2 floaters" src="../assets/rs.jpg" /></span>
   </div>
+  <audio controls id="music">
+    <source src="../assets/audio/hino-gremio-rs.mp3" type="audio/mpeg" />
+  </audio>
   <div class="agrup-content">
     <div class="caixa">
       <div>
@@ -88,9 +91,7 @@
   <div>
     <img src="../assets/mosqueteiro.png" alt="" />
   </div>
-  <audio controls autoplay id="music">
-    <source src="../assets/audio/hino-gremio-rs.mp3" type="audio/mpeg" />
-  </audio>
+  
 </template>
 
 <script>
@@ -107,6 +108,7 @@ export default {
     mute() {
       this.is_muted = !this.is_muted;
       document.getElementById("music").muted = this.is_muted;
+      console.log(document.getElementById("music").muted, this.is_muted)
     },
     goto() {
       window.location.href = "https://arenapoa.com.br/ingressos/";
@@ -117,7 +119,8 @@ export default {
 
 <style>
 audio {
-  display: none;
+  margin-top:2rem;
+  margin-bottom:-1rem;
 }
 
 @media only screen and (min-width: 600px) {
